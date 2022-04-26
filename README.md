@@ -152,11 +152,13 @@ OR
 ```php
 // Laravel 8
 Route::post('/pay', [App\Http\Controllers\PaymentController::class, 'redirectToGateway'])->name('pay');
+
+
 ```
 
 
 ```php
-Route::get('/payment/callback', 'PaymentController@handleGatewayCallback');
+Route::get('/payment/callback', 'PaymentController@handleGatewayCallback')->name('payment.callback');
 ```
 
 OR
